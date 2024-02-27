@@ -1,0 +1,179 @@
+---
+import { Image } from "astro:assets";
+import pic from "../../images/profilepic.jpeg";
+import AstroSvg from "../../images/svgs/Astro.astro";
+import NextSvg from "../../images/svgs/Next.astro";
+import LinkSvg from "../../images/svgs/Link.astro";
+import JsSvg from "../../images/svgs/Js.astro";
+import TsSvg from "../../images/svgs/Ts.astro";
+import TwSvg from "../../images/svgs/Tw.astro";
+import NodeSvg from "../../images/svgs/Node.astro";
+import HtmlSvg from "../../images/svgs/Html.astro";
+import CssSvg from "../../images/svgs/Css.astro";
+import PsqlSvg from "../../images/svgs/Psql.astro";
+import MysqlSvg from "../../images/svgs/Mysql.astro";
+---
+
+<aside
+  class="w-96 p-12 dark:bg-slate-900 bg-slate-100 shadow space-y-12 dark:text-white"
+>
+  <Image src={pic} alt="Francesco Sommaruga" class="rounded-full w-24" />
+  <div>
+    <h3 class="text-xl font-bold">Contatti</h3>
+    <div class="bg-slate-700 h-1 w-full rounded-full mb-8 dark:bg-green-500">
+    </div>
+    <ul class="space-y-2">
+      <li class="">
+        <a
+          href="mailto:francesco.sommaruga@live.it"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          francesco.sommaruga@live.it</a
+        >
+      </li>
+      <li class="">
+        <a
+          href="tel:+393496123456"
+          class="block bg-slate-200 dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          +39 331 133 4873</a
+        >
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="text-xl font-bold">Lingue</h3>
+    <div class="bg-slate-700 dark:bg-green-500 h-1 w-full rounded-full mb-8">
+    </div>
+    <div class="grid grid-cols-4 grid-rows-3 gap-2 dark:text-white">
+      <p class="font-semibold row-span-1 row-start-1 col-span-1 block">
+        Italiano
+      </p>
+      <p class="font-semibold row-span-1 row-start-2 col-span-1 block">
+        Inglese
+      </p>
+      <p class="font-semibold row-span-1 row-start-3 block">Spagnolo</p>
+
+      <div class="row-span-1 col-span-3">
+        <div class="h-8 w-full bg-slate-800 dark:bg-green-500 rounded-lg"></div>
+      </div>
+      <div class="row-span-1 col-span-3">
+        <div class="h-8 w-[60%] bg-slate-800 dark:bg-green-500 rounded-lg">
+        </div>
+      </div>
+      <div class="row-span-1 col-span-3">
+        <div class="h-8 w-[30%] bg-slate-800 dark:bg-green-500 rounded-lg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <h3 class="text-xl font-bold">Competenze</h3>
+    <div class="bg-slate-700 dark:bg-green-500 h-1 w-full rounded-full mb-8">
+    </div>
+
+    <ul class="space-y-2">
+      <li class="">
+        <a
+          href="https://nextjs.org/"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <NextSvg /> Next.js <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <JsSvg /> Javascript <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://www.typescriptlang.org/"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <TsSvg /> Typescript <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://astro.build/"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <AstroSvg /> Astro.js <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://nodejs.org/"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <NodeSvg /> Node.js <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <HtmlSvg /> HTML <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <CssSvg /> CSS <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://tailwindcss.com/"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <TwSvg /> Tailwind <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://www.postgresql.org/"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <PsqlSvg /> PostgreSQL <LinkSvg />
+        </a>
+      </li>
+
+      <li class="">
+        <a
+          href="https://www.mysql.com/"
+          target="_blank"
+          class="block dark:bg-slate-700 dark:text-white dark:hover:bg-slate-800 bg-slate-200 hover:bg-slate-600 hover:text-white transition-all rounded-lg p-4"
+        >
+          <MysqlSvg /> MySQL <LinkSvg />
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>

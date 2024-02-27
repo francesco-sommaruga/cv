@@ -1,10 +1,137 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import ToggleDarkMode from "../components/ToggleDarkMode.astro";
 ---
 
 <Layout title="Francesco Sommaruga - CV">
+  <div
+    class="flex-1 max-w-7xl mx-auto dark:bg-slate-800 dark:text-white text-slate-800"
+  >
+    <header class="flex w-full justify-between p-6">
+      <div class="flex flex-col">
+        <h1 class="font-black text-3xl">Francesco Sommaruga</h1>
+        <h2 class="text-slate-600 dark:text-slate-300">
+          Web Developer / Management Engineer
+        </h2>
+      </div>
+      <ToggleDarkMode />
+    </header>
 
+    <main class="p-6 space-y-12">
+      <section>
+        <h3 class="text-2xl font-bold mb-4">Profilo</h3>
+
+        <p class="dark:text-slate-200 text-slate-700">
+          Sono un web developer con una laurea in Ingegneria Gestionale
+          conseguita presso il Politecnico di Milano. Mi occupo di sviluppo web
+          da più di 5 anni, con particolare attenzione allo sviluppo di
+          applicazioni web e siti web. Sono appassionato di tecnologia e mi
+          piace sperimentare nuovi strumenti e linguaggi di programmazione.
+        </p>
+      </section>
+
+      <section>
+        <h3 class="text-2xl font-bold mb-4">Esperienze professionali</h3>
+
+        <div class="flex">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-300 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-300 bg-green-500 rounded-full flex-1 h-full w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Realizzazione Siti Business &bull; 2019 - 2023
+            </h4>
+
+            <p class="pb-2 dark:text-slate-200 text-slate-700">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque
+              vitae aperiam maxime recusandae quia officia autem, distinctio nam
+              architecto! Ducimus iste debitis nam tempora earum tempore
+              expedita minima laudantium?
+            </p>
+
+            <ul
+              class="pb-8 list-inside space-y-2 dark:text-white text-slate-900"
+            >
+              <li>
+                <a
+                  href="https://mondoyogamilano.it/"
+                  class="text-green-700 font-bold"
+                  target="_blank">mondoyogamilano.it</a
+                >
+              </li><li>
+                <a
+                  href="https://www.fisioredimilano.it/"
+                  target="_blank"
+                  class="text-green-700 font-bold">fisioredimilano.it</a
+                >
+              </li>
+
+              <li>
+                <a
+                  href="https://www.velascoprod.com/collection/all-sports"
+                  target="_blank"
+                  class="text-green-700 font-bold"
+                >
+                  velascoprod.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-300 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-300 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Realizzazione E-Commerce &bull; 2021
+            </h4>
+
+            <ul class="pb-8 space-y-2 dark:text-slate-200 text-slate-700">
+              <li>
+                <a href="https://shop.skymedicale.com/" target="_blank"
+                  >shop.skymedicale.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-300 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-300 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Realizzazione Piattaforma di Streaming (Co-Founder) &bull; 2020 -
+              Oggi
+            </h4>
+
+            <ul class="pb-8 space-y-2 dark:text-slate-200 text-slate-700">
+              <li>
+                <a href="https://mymondo.yoga/" target="_blank">mymondo.yoga</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </Layout>
-
-
