@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import ToggleDarkMode from "../components/ToggleDarkMode.astro";
+import MobileSidebar from "../components/sidebar/MobileSidebar.astro";
 ---
 
 <Layout title="Francesco Sommaruga - CV">
@@ -15,7 +16,8 @@ import ToggleDarkMode from "../components/ToggleDarkMode.astro";
           Web Developer / Management Engineer
         </h2>
       </div>
-      <ToggleDarkMode />
+      <div class="hidden lg:block"><ToggleDarkMode /></div>
+      <MobileSidebar />
     </header>
 
     <main class="p-6 space-y-12">
@@ -32,89 +34,14 @@ import ToggleDarkMode from "../components/ToggleDarkMode.astro";
       </section>
 
       <section>
-        <h3 class="text-2xl font-bold mb-4">Esperienze professionali</h3>
+        <h3 class="text-2xl font-bold mb-6">Esperienze professionali</h3>
 
         <div class="flex">
           <div class="flex flex-col items-center mr-4">
-            <div class="dark:bg-green-300 bg-green-500 rounded-full h-4 w-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
             </div>
             <div
-              class="dark:bg-green-300 bg-green-500 rounded-full flex-1 h-full w-1 -mt-1"
-            >
-            </div>
-          </div>
-          <div class="flex-1">
-            <h4 class="font-bold text-lg mb-2">
-              Realizzazione Siti Business &bull; 2019 - 2023
-            </h4>
-
-            <p class="pb-2 dark:text-slate-200 text-slate-700">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et itaque
-              vitae aperiam maxime recusandae quia officia autem, distinctio nam
-              architecto! Ducimus iste debitis nam tempora earum tempore
-              expedita minima laudantium?
-            </p>
-
-            <ul
-              class="pb-8 list-inside space-y-2 dark:text-white text-slate-900"
-            >
-              <li>
-                <a
-                  href="https://mondoyogamilano.it/"
-                  class="text-green-700 font-bold"
-                  target="_blank">mondoyogamilano.it</a
-                >
-              </li><li>
-                <a
-                  href="https://www.fisioredimilano.it/"
-                  target="_blank"
-                  class="text-green-700 font-bold">fisioredimilano.it</a
-                >
-              </li>
-
-              <li>
-                <a
-                  href="https://www.velascoprod.com/collection/all-sports"
-                  target="_blank"
-                  class="text-green-700 font-bold"
-                >
-                  velascoprod.com</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="flex -mt-1">
-          <div class="flex flex-col items-center mr-4">
-            <div class="dark:bg-green-300 bg-green-500 rounded-full h-4 w-4">
-            </div>
-            <div
-              class="dark:bg-green-300 bg-green-500 rounded-full flex-1 w-1 -mt-1"
-            >
-            </div>
-          </div>
-          <div class="flex-1">
-            <h4 class="font-bold text-lg mb-2">
-              Realizzazione E-Commerce &bull; 2021
-            </h4>
-
-            <ul class="pb-8 space-y-2 dark:text-slate-200 text-slate-700">
-              <li>
-                <a href="https://shop.skymedicale.com/" target="_blank"
-                  >shop.skymedicale.com</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="flex -mt-1">
-          <div class="flex flex-col items-center mr-4">
-            <div class="dark:bg-green-300 bg-green-500 rounded-full h-4 w-4">
-            </div>
-            <div
-              class="dark:bg-green-300 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 w-1 -mt-1"
             >
             </div>
           </div>
@@ -126,7 +53,284 @@ import ToggleDarkMode from "../components/ToggleDarkMode.astro";
 
             <ul class="pb-8 space-y-2 dark:text-slate-200 text-slate-700">
               <li>
-                <a href="https://mymondo.yoga/" target="_blank">mymondo.yoga</a>
+                <a
+                  href="https://mymondo.yoga/"
+                  class="text-green-700 dark:text-green-400 font-bold"
+                  target="_blank">mymondo.yoga</a
+                >
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  Piattaforma di streaming di lezioni di yoga, pilates e
+                  meditazione realizzata in collaborazione con il centro Mondo
+                  di Milano. Si tratta di una srl di cui sono co-fondatore e
+                  sviluppatore. La società è tutt'ora in attività e
+                  profittevole. <br /><br /> Per quanto riguarda lo sviluppo, il
+                  sito è stato realizzato in una prima fase di MVP con WordPress
+                  e successivamente riscritto in Next.js per implementare funzionalità
+                  custom e migliorare le performance. Per il backend abbiamo utilizzato
+                  Strapi, un headless CMS open source molto personalizzabile abbinato
+                  ad alcuni servizi AWS, come S3 e Cloudfront.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 h-full w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Realizzazione Siti Business &bull; 2019 - 2023
+            </h4>
+
+            <ul
+              class="pb-8 list-inside space-y-2 dark:text-white text-slate-900"
+            >
+              <li>
+                <a
+                  href="https://mondoyogamilano.it/"
+                  class="text-green-700 dark:text-green-400 font-bold"
+                  target="_blank">mondoyogamilano.it</a
+                >
+
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  Sito Realizzato a fine 2019-inizio 2020 per un centro yoga di
+                  Milano. Il sito è stato realizzato con WordPress e Elementor,
+                  per assecondare le esigenze del cliente e permettere una
+                  gestione autonoma del sito. Sono inoltre incluse funzionalità
+                  di e-commerce per acquistare i pacchetti delle lezioni.
+                </p>
+              </li><li>
+                <a
+                  href="https://www.fisioredimilano.it/"
+                  target="_blank"
+                  class="text-green-700 dark:text-green-400 font-bold"
+                  >fisioredimilano.it</a
+                >
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  Sito realizzato nel 2021 per uno studio di fisioterapia di
+                  Milano. Il lavoro prevedeva il rifacimento 1:1 del sito
+                  esistente mantenendo la grafica e le funzionalità con lo scopo
+                  di eliminare Worpress e abbattere i costi di manutenzione. Il
+                  sito è stato quindi riscritto interamnete in Next.js,
+                  ricostruendo gli elementi grafici manualmente con una
+                  soluzione di styling css in js abbinata alla libreria di
+                  animazione framer motion.
+                </p>
+              </li>
+
+              <li>
+                <a
+                  href="https://www.velascoprod.com/collection/all-sports"
+                  target="_blank"
+                  class="text-green-700 dark:text-green-400 font-bold"
+                >
+                  velascoprod.com</a
+                >
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  Portfolio nel 2023 per un graphic designer di Milano. Ho
+                  realizzato il sito con Next.js e TailwindCSS, con l'obiettivo
+                  di creare un sito veloce e performante, con un'esperienza
+                  utente ottimale. Inoltre, è stato implementato DecapCMS, un
+                  Content Management System git-based che permette al cliente di
+                  gestire autonomamente il sito senza richiedere alcun server.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Realizzazione E-Commerce &bull; 2021
+            </h4>
+
+            <ul class="pb-8 space-y-2 dark:text-slate-200 text-slate-700">
+              <li>
+                <a
+                  href="https://shop.skymedicale.com/"
+                  target="_blank"
+                  class="text-green-700 dark:text-green-400 font-bold"
+                  >shop.skymedicale.com</a
+                >
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  E-commerce realizzato nel 2021 per un'azienda di Milano che
+                  vende dispositivi medici. Il sito è stato realizzato con
+                  Shopify, con l'obiettivo di creare un sito veloce e
+                  performante, con un'esperienza utente ottimale e interamente
+                  gestibile dal cliente.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Socio attività agrituristica &bull; 2021 - Oggi
+            </h4>
+
+            <ul class="space-y-2 dark:text-slate-200 text-slate-700">
+              <li>
+                <a
+                  href="https://mymondo.yoga/"
+                  class="text-green-700 dark:text-green-400 font-bold"
+                  target="_blank">mymondo.yoga</a
+                >
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  Sono socio di un'attività agrituristica e agricola in
+                  provincia di Grosseto. Svolgo solo occasionalmente attività di
+                  supporto senza avere ruoli attivi.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3 class="text-2xl font-bold mb-6">Formazione</h3>
+
+        <div class="flex">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Laurea Triennale in Ingegneria Gestionale &bull; 2019
+            </h4>
+
+            <ul class="pb-8 space-y-2 dark:text-slate-200 text-slate-700">
+              <li>
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  <strong>Politecnico di Milano</strong>
+                  <br />
+                  Ho iniziato il mio percorso di studi in Ingegneria Energetica,
+                  ho poi cambiato corso di laurea per Ingegneria Gestionale. Il percorso
+                  di studi mi ha permesso di approfondire le materie di economia,
+                  matematica, statistica, informatica (corsi di C, Matlab, SQL, algoritmi
+                  e progettazione di database) e gestione aziendale (contabilità,
+                  valutazione investimenti, microeconomia, macroeconomia ed economia
+                  aziendale).
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 h-full w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Introductory Certificate in Project Management &bull; 2016
+            </h4>
+
+            <ul
+              class="pb-8 list-inside space-y-2 dark:text-white text-slate-900"
+            >
+              <li>
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  <strong
+                    >IPMA (International Project Management Association)</strong
+                  >
+                  <br /> Il corso mi ha permesso di apprendere le basi della gestione
+                  di progetti e di ottenere una certificazione riconosciuta a livello
+                  internazionale.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Startup 101 - Dall'idea all'azione &bull; 2018
+            </h4>
+
+            <ul class="pb-8 space-y-2 dark:text-slate-200 text-slate-700">
+              <li>
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  <strong>Politecnico di Milano</strong>
+                  <br />
+                  Corso di formazione per imprenditori e startupper organizzato da
+                  Polihub, l'incubatore del Politecnico di Milano. Il corso mi ha
+                  permesso di apprendere le basi della creazione di una startup e
+                  conoscere imprenditori già affermati.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex -mt-1">
+          <div class="flex flex-col items-center mr-4">
+            <div class="dark:bg-green-400 bg-green-500 rounded-full h-4 w-4">
+            </div>
+            <div
+              class="dark:bg-green-400 bg-green-500 rounded-full flex-1 w-1 -mt-1"
+            >
+            </div>
+          </div>
+          <div class="flex-1">
+            <h4 class="font-bold text-lg mb-2">
+              Divide and Conquer, Sorting and Searching, and Randomized
+              Algorithms &bull; 2020
+            </h4>
+
+            <ul class="space-y-2 dark:text-slate-200 text-slate-700">
+              <li>
+                <p class="pb-2 pt-1 dark:text-slate-200 text-slate-700">
+                  <strong>Stanford University on Coursera</strong>
+                  <br />
+                  Corso di formazione online seguito durante la mia fase di studio
+                  autonomo della programmazione. Il corso mi ha permesso di approfondire
+                  le basi degli algoritmi e delle strutture dati.
+                </p>
               </li>
             </ul>
           </div>

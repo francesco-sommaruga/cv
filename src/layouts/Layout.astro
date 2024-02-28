@@ -17,7 +17,7 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="flex min-h-screen">
+  <body class="flex min-h-screen dark">
     <Sidebar />
     <slot />
   </body>
@@ -33,5 +33,17 @@ const { title } = Astro.props;
       rgb(var(--accent-light)) 30%,
       white 60%
     );
+  }
+
+  *::-webkit-scrollbar {
+    @apply w-1.5 bg-green-500;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    @apply bg-green-500  hover:bg-green-600;
+  }
+
+  *::-webkit-scrollbar-track {
+    @apply bg-green-900/80;
   }
 </style>

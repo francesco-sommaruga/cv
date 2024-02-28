@@ -12,12 +12,96 @@ import HtmlSvg from "../../images/svgs/Html.astro";
 import CssSvg from "../../images/svgs/Css.astro";
 import PsqlSvg from "../../images/svgs/Psql.astro";
 import MysqlSvg from "../../images/svgs/Mysql.astro";
+import ToggleDarkMode from "../ToggleDarkMode.astro";
 ---
 
-<aside
-  class="w-96 hidden lg:block p-12 dark:bg-slate-900 bg-slate-100 shadow space-y-12 dark:text-white"
->
-  <Image src={pic} alt="Francesco Sommaruga" class="rounded-full w-24" />
+<div class="lg:hidden">
+  <button
+    id="open-mobile-sidebar"
+    class="p-1 rounded-md text-green-950 dark:text-white"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-8 h-8"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+    </svg>
+  </button>
+</div>
+
+<aside id="mobile-sidebar" class="sidebar sidebar-hidden">
+  <div class="flex justify-between">
+    <button
+      id="toggle-dark-mode-mobile"
+      class="border border-gray-400 dark:border-gray-400 p-1 rounded-lg"
+      ><svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 inline"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+        ></path>
+      </svg>
+      /
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 inline"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+        ></path>
+      </svg>
+    </button>
+
+    <script>
+      const toggleDarkMode = document.getElementById("toggle-dark-mode-mobile");
+      const body = document.body;
+
+      if (toggleDarkMode) {
+        toggleDarkMode.addEventListener("click", () => {
+          body.classList.toggle("dark");
+        });
+      }
+    </script>
+
+    <button id="close-mobile-sidebar">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-8 h-8"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+  </div>
+  <div class="flex justify-center">
+    <Image src={pic} alt="Francesco Sommaruga" class="rounded-full w-24" />
+  </div>
   <div>
     <h3 class="text-xl font-bold">Contatti</h3>
     <div class="bg-slate-700 h-1 w-full rounded-full mb-8 dark:bg-green-500">
@@ -177,3 +261,32 @@ import MysqlSvg from "../../images/svgs/Mysql.astro";
     </ul>
   </div>
 </aside>
+
+<script>
+  const openMobileSidebar = document.getElementById("open-mobile-sidebar");
+  const mobileSidebar = document.getElementById("mobile-sidebar");
+
+  openMobileSidebar.addEventListener("click", () => {
+    mobileSidebar.classList.toggle("sidebar-visible");
+    mobileSidebar.classList.toggle("sidebar-hidden");
+  });
+
+  //   close
+  const closeMobileSidebar = document.getElementById("close-mobile-sidebar");
+  closeMobileSidebar.addEventListener("click", () => {
+    mobileSidebar.classList.toggle("sidebar-visible");
+    mobileSidebar.classList.toggle("sidebar-hidden");
+  });
+</script>
+
+<style>
+  .sidebar {
+    @apply overflow-auto lg:hidden fixed top-0 left-0 h-screen  transition-all duration-300 w-full md:max-w-96  p-6 dark:bg-slate-900 bg-slate-100 shadow space-y-12 dark:text-white;
+  }
+  .sidebar-hidden {
+    @apply -translate-x-[100%];
+  }
+  .sidebar-visible {
+    @apply translate-x-0;
+  }
+</style>
