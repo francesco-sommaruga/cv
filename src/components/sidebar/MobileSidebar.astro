@@ -12,7 +12,6 @@ import HtmlSvg from "../../images/svgs/Html.astro";
 import CssSvg from "../../images/svgs/Css.astro";
 import PsqlSvg from "../../images/svgs/Psql.astro";
 import MysqlSvg from "../../images/svgs/Mysql.astro";
-import ToggleDarkMode from "../ToggleDarkMode.astro";
 ---
 
 <div class="lg:hidden">
@@ -266,17 +265,23 @@ import ToggleDarkMode from "../ToggleDarkMode.astro";
   const openMobileSidebar = document.getElementById("open-mobile-sidebar");
   const mobileSidebar = document.getElementById("mobile-sidebar");
 
-  openMobileSidebar.addEventListener("click", () => {
-    mobileSidebar.classList.toggle("sidebar-visible");
-    mobileSidebar.classList.toggle("sidebar-hidden");
-  });
+  if (mobileSidebar) {
+    if (openMobileSidebar) {
+      openMobileSidebar.addEventListener("click", () => {
+        mobileSidebar.classList.toggle("sidebar-visible");
+        mobileSidebar.classList.toggle("sidebar-hidden");
+      });
+    }
 
-  //   close
-  const closeMobileSidebar = document.getElementById("close-mobile-sidebar");
-  closeMobileSidebar.addEventListener("click", () => {
-    mobileSidebar.classList.toggle("sidebar-visible");
-    mobileSidebar.classList.toggle("sidebar-hidden");
-  });
+    //   close
+    const closeMobileSidebar = document.getElementById("close-mobile-sidebar");
+    if (closeMobileSidebar) {
+      closeMobileSidebar.addEventListener("click", () => {
+        mobileSidebar.classList.toggle("sidebar-visible");
+        mobileSidebar.classList.toggle("sidebar-hidden");
+      });
+    }
+  }
 </script>
 
 <style>
